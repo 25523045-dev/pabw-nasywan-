@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Film Favorit Saya - Worksheet P5</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="komponen.css">
+  <link rel="stylesheet" href="tema.css">
+</head>
+<body class="page">
+  <header class="kepala">
+    <div class="kepala__isi">
+      <div>
+        <h1>Film Favorit Saya</h1>
+        <p>Daftar film favorit saya beserta tahun, genre, dan rating.</p>
+      </div>
+      <div class="tema-kontrol">
+        <input type="checkbox" id="tema" class="pengalih-tema">
+        <label for="tema" class="tombol-tema">Tema gelap</label>
+      </div>
+    </div>
+  </header>
+
+  <div class="isi">
+    <aside class="sisi">
+      <nav class="navbar" aria-label="Navigasi utama">
+        <a href="#daftar-film">Daftar Film</a>
+        <a href="#tambah-film">Tambah Film</a>
+        <a href="#tentang-saya">Tentang Saya</a>
+      </nav>
+    </aside>
+
+    <main class="utama">
+      <section id="daftar-film" class="sorotan">
+        <div class="section-heading">
+          <h2>Daftar Film</h2>
+          <p>Beberapa film yang paling saya sukai.</p>
+        </div>
+
+        <figure class="hero-film">
+          <img src="film-favorit.jpg" alt="Ilustrasi koleksi film favorit" width="800" height="450" loading="lazy">
+          <figcaption>Ilustrasi koleksi film favorit saya.</figcaption>
+        </figure>
+
+        <div class="galeri">
+          <article class="kartu">
+            <div class="kartu__isi">
+              <h3>Inception</h3>
+              <p>Film fiksi ilmiah tentang mimpi dan pencurian informasi.</p>
+            </div>
+            <div class="kartu__kaki">
+              <span>2010 · Fiksi Ilmiah</span>
+              <strong>9/10</strong>
+            </div>
+          </article>
+
+          <article class="kartu">
+            <div class="kartu__isi">
+              <h3>Interstellar</h3>
+              <p>Petualangan luar angkasa untuk mencari tempat tinggal baru bagi manusia.</p>
+            </div>
+            <div class="kartu__kaki">
+              <span>2014 · Fiksi Ilmiah</span>
+              <strong>9.5/10</strong>
+            </div>
+          </article>
+
+          <article class="kartu">
+            <div class="kartu__isi">
+              <h3>The Dark Knight</h3>
+              <p>Kisah pahlawan yang menghadapi ancaman besar di Gotham.</p>
+            </div>
+            <div class="kartu__kaki">
+              <span>2008 · Aksi</span>
+              <strong>9/10</strong>
+            </div>
+          </article>
+        </div>
+
+        <table>
+          <caption>Daftar film favorit</caption>
+          <thead>
+            <tr>
+              <th scope="col">Judul Film</th>
+              <th scope="col">Tahun</th>
+              <th scope="col">Genre</th>
+              <th scope="col">Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Inception</th><td>2010</td><td>Fiksi Ilmiah</td><td>9/10</td>
+            </tr>
+            <tr>
+              <th scope="row">Interstellar</th><td>2014</td><td>Fiksi Ilmiah</td><td>9.5/10</td>
+            </tr>
+            <tr>
+              <th scope="row">The Dark Knight</th><td>2008</td><td>Aksi</td><td>9/10</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="tambah-film" class="papan">
+        <h2>Tambah Film</h2>
+        <form>
+          <div class="form-kolom">
+            <label for="judul">Judul Film</label>
+            <input type="text" id="judul" name="judul" required>
+            <span class="pesan-galat">Judul film wajib diisi.</span>
+          </div>
+          <div class="form-kolom">
+            <label for="tahun">Tahun</label>
+            <input type="number" id="tahun" name="tahun" min="1900" max="2100" required>
+            <span class="pesan-galat">Tahun wajib diisi dengan angka yang sesuai.</span>
+          </div>
+          <div class="form-kolom">
+            <label for="rating">Rating</label>
+            <input type="number" id="rating" name="rating" min="0" max="10" step="0.1" required>
+            <span class="pesan-galat">Rating wajib diisi.</span>
+          </div>
+          <button type="submit">Tambah Film</button>
+        </form>
+      </section>
+
+      <section id="tentang-saya">
+        <h2>Tentang Saya</h2>
+        <p>Halaman ini berisi daftar film yang saya sukai.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Film Favorit Saya</p>
+  </footer>
+</body>
+</html>

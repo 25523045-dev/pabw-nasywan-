@@ -1,0 +1,154 @@
+/* P5 — Layout Modern: Flexbox dan Grid */
+
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+  gap: 0;
+}
+
+.kepala {
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.kepala__isi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.tema-kontrol {
+  flex: 0 0 auto;
+}
+
+.isi {
+  display: grid;
+  grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+  grid-template-areas: "sisi utama";
+  align-items: start;
+  gap: var(--space-6);
+  min-width: 0;
+  padding-block: var(--space-6);
+}
+
+.sisi {
+  grid-area: sisi;
+  min-width: 0;
+}
+
+.utama {
+  grid-area: utama;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    "sorotan sorotan"
+    "papan papan"
+    "tentang tentang";
+  gap: var(--section-gap);
+  min-width: 0;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.navbar a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.navbar a:hover { text-decoration: underline; }
+
+.utama > section {
+  display: grid;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.sorotan { grid-column: 1 / -1; grid-area: sorotan; }
+.papan { grid-column: 1 / -1; grid-area: papan; }
+.utama > section#tentang-saya { grid-column: 1 / -1; grid-area: tentang; }
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.section-heading > * { min-width: 0; }
+
+figure {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+figure img {
+  width: min(100%, 36rem);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+
+th,
+td {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+th {
+  background: var(--color-surface);
+  color: var(--color-fg);
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 42rem;
+  min-width: 0;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+legend { padding-inline: var(--space-2); font-weight: 700; }
+
+footer {
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+}

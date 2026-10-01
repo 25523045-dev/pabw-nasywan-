@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Film Favorit Saya</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="komponen.css">
+  <link rel="stylesheet" href="tema.css">
+</head>
+<body>
+  <header>
+<input type="checkbox" id="tema" class="pengalih-tema">
+<label for="tema" class="tombol-tema">Tema gelap</label>
+
+    <h1>Film Favorit Saya</h1>
+    <p>Daftar film favorit saya beserta tahun, genre, dan rating.</p>
+  </header>
+
+  <nav aria-label="Navigasi utama">
+    <a href="#daftar-film">Daftar Film</a>
+    <a href="#tambah-film">Tambah Film</a>
+    <a href="#tentang-saya">Tentang Saya</a>
+  </nav>
+
+  <main>
+    <section id="daftar-film">
+      <h2>Daftar Film</h2>
+
+      <figure>
+        <img src="film-favorit.jpg" alt="Ilustrasi koleksi film favorit" width="800" height="450" loading="lazy">
+        <figcaption>Ilustrasi koleksi film favorit saya.</figcaption>
+      </figure>
+
+      <table>
+        <caption>Daftar film favorit</caption>
+        <thead>
+          <tr>
+            <th scope="col">Judul Film</th>
+            <th scope="col">Tahun</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Inception</th>
+            <td>2010</td>
+            <td>Fiksi Ilmiah</td>
+            <td>9/10</td>
+          </tr>
+          <tr>
+            <th scope="row">Interstellar</th>
+            <td>2014</td>
+            <td>Fiksi Ilmiah</td>
+            <td>9.5/10</td>
+          </tr>
+          <tr>
+            <th scope="row">The Dark Knight</th>
+            <td>2008</td>
+            <td>Aksi</td>
+            <td>9/10</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="tambah-film">
+      <h2>Tambah Film</h2>
+      <form>
+        <div>
+          <label for="judul">Judul Film</label>
+          <input type="text" id="judul" name="judul" required>
+        </div>
+
+        <div>
+          <label for="tahun">Tahun</label>
+          <input type="number" id="tahun" name="tahun" min="1900" max="2100" required>
+        </div>
+
+        <div>
+          <label for="rating">Rating</label>
+          <input type="number" id="rating" name="rating" min="0" max="10" step="0.1" required>
+        </div>
+
+        <button type="submit">Tambah Film</button>
+      </form>
+    </section>
+
+    <section id="tentang-saya">
+      <h2>Tentang Saya</h2>
+      <p>Halaman ini berisi daftar film yang saya sukai.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Film Favorit Saya</p>
+  </footer>
+</body>
+</html>
