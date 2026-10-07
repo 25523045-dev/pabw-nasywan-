@@ -1,0 +1,144 @@
+/* =========================================================
+   LAYOUT P5 — FLEXBOX DAN GRID
+   ========================================================= */
+
+/* -------------------------
+   Kerangka halaman
+   ------------------------- */
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+  gap: var(--space-6);
+}
+
+/* -------------------------
+   Kepala halaman
+   ------------------------- */
+.kepala {
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.kepala__isi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.kepala__isi > div {
+  min-width: 0;
+}
+
+/* -------------------------
+   Navbar
+   ------------------------- */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.navbar a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------
+   Area isi dua kolom
+   ------------------------- */
+.isi {
+  display: grid;
+  grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-6);
+  min-width: 0;
+}
+
+.sisi,
+.utama {
+  min-width: 0;
+}
+
+.utama {
+  display: grid;
+  gap: var(--section-gap);
+  min-width: 0;
+}
+
+/* -------------------------
+   Penempatan area bernama
+   ------------------------- */
+.sisi {
+  grid-area: sisi;
+}
+
+.utama {
+  grid-area: utama;
+}
+
+/* -------------------------
+   Gambar
+   ------------------------- */
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
+}
+
+figure img {
+  width: min(100%, 40rem);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+}
+
+/* -------------------------
+   Tabel
+   ------------------------- */
+.tabel-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+
+th,
+td {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+
+th {
+  background: var(--color-surface);
+  color: var(--color-fg);
+  font-weight: 700;
+}
+
+/* -------------------------
+   Footer
+   ------------------------- */
+footer {
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+}
+
+/* -------------------------
+   Layar sempit
+   Tidak memakai media query.
+   minmax(0, ...) mencegah overflow.
+   ------------------------- */

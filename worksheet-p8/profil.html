@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Film Favorit Saya</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="komponen.css">
+  <link rel="stylesheet" href="tema.css">
+  <link rel="stylesheet" href="responsif.css">
+</head>
+
+<body>
+  <div class="page">
+    <header class="kepala">
+      <div class="kepala__isi">
+        <div>
+          <h1>Film Favorit Saya</h1>
+          <p>Daftar film favorit saya beserta tahun, genre, dan rating.</p>
+        </div>
+
+        <label for="tema" class="tombol-tema">Tema gelap</label>
+        <input type="checkbox" id="tema" class="pengalih-tema">
+      </div>
+    </header>
+
+    <div class="isi">
+      <aside class="sisi">
+        <nav class="navbar" aria-label="Navigasi utama">
+          <a href="#daftar-film">Daftar Film</a>
+          <a href="#tambah-film">Tambah Film</a>
+          <a href="#tentang-saya">Tentang Saya</a>
+        </nav>
+      </aside>
+
+      <main class="utama">
+        <section id="daftar-film" class="kartu sorotan">
+          <div class="kartu__isi">
+            <h2>Daftar Film</h2>
+
+            <figure>
+              <img src="film-favorit.jpg" alt="Ilustrasi koleksi film favorit" width="800" height="450" loading="lazy">
+              <figcaption>Ilustrasi koleksi film favorit saya.</figcaption>
+            </figure>
+
+            <p class="petunjuk-gulir">Geser tabel ke samping untuk melihat semua kolom &rarr;</p>
+            <div class="tabel-wrap" tabindex="0" role="region" aria-label="Tabel daftar film">
+              <table>
+                <caption>Daftar film favorit</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Poster</th>
+                    <th scope="col">Judul Film</th>
+                    <th scope="col">Tahun</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Rating</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="--i:1">
+                    <td><img class="poster" src="poster-inception.jpg" alt="Poster film Inception" width="200" height="300" loading="lazy"></td>
+                    <th scope="row"><span>Inception</span><button type="button" class="tombol-hapus" aria-label="Hapus film Inception">Hapus</button></th>
+                    <td>2010</td>
+                    <td>Fiksi Ilmiah</td>
+                    <td>9/10</td>
+                  </tr>
+                  <tr style="--i:2">
+                    <td><img class="poster" src="poster-interstellar.jpg" alt="Poster film Interstellar" width="200" height="300" loading="lazy"></td>
+                    <th scope="row"><span>Interstellar</span><button type="button" class="tombol-hapus" aria-label="Hapus film Interstellar">Hapus</button></th>
+                    <td>2014</td>
+                    <td>Fiksi Ilmiah</td>
+                    <td>9.5/10</td>
+                  </tr>
+                  <tr style="--i:3">
+                    <td><img class="poster" src="poster-dark-knight.jpg" alt="Poster film The Dark Knight" width="200" height="300" loading="lazy"></td>
+                    <th scope="row"><span>The Dark Knight</span><button type="button" class="tombol-hapus" aria-label="Hapus film The Dark Knight">Hapus</button></th>
+                    <td>2008</td>
+                    <td>Aksi</td>
+                    <td>9/10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <div class="galeri">
+          <section id="tambah-film" class="kartu">
+            <div class="kartu__isi">
+              <h2>Tambah Film</h2>
+
+              <form>
+                <div class="form-kolom">
+                  <label for="judul">Judul Film</label>
+                  <input type="text" id="judul" name="judul" required>
+                  <p class="pesan-galat">Judul film wajib diisi.</p>
+                </div>
+
+                <div class="form-kolom">
+                  <label for="tahun">Tahun</label>
+                  <input type="number" id="tahun" name="tahun" min="1900" max="2100" required>
+                  <p class="pesan-galat">Tahun film wajib diisi.</p>
+                </div>
+
+                <div class="form-kolom">
+                  <label for="genre">Genre (opsional)</label>
+                  <input type="text" id="genre" name="genre">
+                </div>
+
+                <div class="form-kolom">
+                  <label for="rating">Rating</label>
+                  <input type="number" id="rating" name="rating" min="0" max="10" step="0.1" required>
+                  <p class="pesan-galat">Rating harus diisi.</p>
+                </div>
+
+                <div class="form-kolom">
+                  <label for="poster">Foto Poster (opsional)</label>
+                  <input type="file" id="poster" name="poster" accept="image/*">
+                </div>
+
+                <div class="kartu__kaki">
+                  <button type="submit">Tambah Film</button>
+                </div>
+              </form>
+            </div>
+          </section>
+
+          <section id="tentang-saya" class="kartu">
+            <div class="kartu__isi">
+              <h2>Tentang Saya</h2>
+              <p>Halaman ini berisi daftar film yang saya sukai.</p>
+            </div>
+          </section>
+
+          <section id="ringkasan" class="kartu">
+            <div class="kartu__isi">
+              <h2>Ringkasan</h2>
+              <p>Jumlah film: <strong id="jumlah-film">3</strong></p>
+              <p>Rata-rata rating: <strong id="rata-rating">9.2/10</strong></p>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Film Favorit Saya</p>
+    </footer>
+  </div>
+  <script>
+    // Tambah film (beserta foto poster bila dipilih) ke tabel tanpa memuat ulang halaman,
+    // sehingga pilihan tema gelap tidak ikut ter-reset.
+    (function () {
+      var form = document.querySelector("#tambah-film form");
+      var tbody = document.querySelector("#daftar-film tbody");
+      var tema = document.getElementById("tema");
+
+      // Hitung jumlah film dan rata-rata rating dari isi tabel
+      function ringkas() {
+        var baris = tbody.querySelectorAll("tr");
+        var total = 0, n = 0;
+        baris.forEach(function (tr) {
+          var nilai = parseFloat(tr.lastElementChild.textContent);
+          if (!isNaN(nilai)) { total += nilai; n++; }
+        });
+        perbarui("jumlah-film", String(baris.length));
+        perbarui("rata-rating", n ? (total / n).toFixed(1) + "/10" : "-");
+      }
+
+      // Ubah teks; bila berubah, beri efek membal pada angkanya
+      function perbarui(id, teks) {
+        var el = document.getElementById(id);
+        if (el.textContent === teks) return;
+        el.textContent = teks;
+        el.classList.remove("bump");
+        void el.offsetWidth;
+        el.classList.add("bump");
+      }
+      ringkas();
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        var tr = document.createElement("tr");
+        tr.className = "baris-baru";
+
+        var tdPoster = document.createElement("td");
+        var berkas = form.poster.files[0];
+        if (berkas && berkas.type.indexOf("image/") === 0) {
+          var img = document.createElement("img");
+          img.className = "poster";
+          img.src = URL.createObjectURL(berkas);
+          img.alt = "Poster film " + form.judul.value.trim();
+          tdPoster.appendChild(img);
+        } else {
+          var kosong = document.createElement("span");
+          kosong.className = "poster-kosong";
+          kosong.textContent = "Tanpa foto";
+          tdPoster.appendChild(kosong);
+        }
+        tr.appendChild(tdPoster);
+
+        var judul = form.judul.value.trim();
+        var th = document.createElement("th");
+        th.scope = "row";
+        var teks = document.createElement("span");
+        teks.textContent = judul;
+        th.appendChild(teks);
+        var hapus = document.createElement("button");
+        hapus.type = "button";
+        hapus.className = "tombol-hapus";
+        hapus.textContent = "Hapus";
+        hapus.setAttribute("aria-label", "Hapus film " + judul);
+        th.appendChild(hapus);
+        tr.appendChild(th);
+
+        var tdTahun = document.createElement("td");
+        tdTahun.textContent = form.tahun.value;
+        tr.appendChild(tdTahun);
+
+        var tdGenre = document.createElement("td");
+        tdGenre.textContent = form.genre.value.trim() || "-";
+        tr.appendChild(tdGenre);
+
+        var tdRating = document.createElement("td");
+        tdRating.textContent = form.rating.value + "/10";
+        tr.appendChild(tdRating);
+
+        tbody.appendChild(tr);
+        ringkas();
+        form.reset();
+        form.judul.focus();
+      });
+
+      // Hapus film dari tabel (konfirmasi dulu supaya tidak terhapus tak sengaja)
+      tbody.addEventListener("click", function (e) {
+        var tombol = e.target.closest(".tombol-hapus");
+        if (!tombol) return;
+        var tr = tombol.closest("tr");
+        if (tr.classList.contains("menghilang")) return;
+        var judul = tr.querySelector("th span").textContent;
+        if (!window.confirm('Hapus "' + judul + '" dari daftar?')) return;
+
+        function selesai() {
+          var img = tr.querySelector("img.poster");
+          if (img && img.src.indexOf("blob:") === 0) URL.revokeObjectURL(img.src);
+          tr.remove();
+          ringkas();
+        }
+
+        var gerak = window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
+        if (gerak) {
+          tr.classList.add("menghilang");
+          setTimeout(selesai, 300);
+        } else {
+          selesai();
+        }
+      });
+
+      // Ingat pilihan tema walau halaman di-refresh
+      try {
+        tema.checked = localStorage.getItem("tema") === "gelap";
+        tema.addEventListener("change", function () {
+          localStorage.setItem("tema", tema.checked ? "gelap" : "terang");
+        });
+      } catch (err) { /* penyimpanan dinonaktifkan: abaikan */ }
+    })();
+  </script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
