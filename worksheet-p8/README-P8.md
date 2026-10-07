@@ -1,14 +1,24 @@
-## Pertemuan 8 — JavaScript Modern ES6+
+## Deklarasi Penggunaan AI — Pertemuan 8
 
-**Nama / NIM:** Nasywan Musyaffa / 25523045
+Pada pengerjaan Worksheet P8, saya menggunakan AI sebagai alat bantu
+untuk memahami materi JavaScript Modern ES6+, terutama penggunaan
+const dan let, template literal, fungsi murni, serta array methods
+map, filter, dan find.
 
-### Yang dikerjakan
-- Data profil (identitas, keahlian, daftar proyek) dipindahkan dari HTML ke `js/app.js` sebagai `const`.
-- Dua fungsi murni: `buatPerkenalan` dan `formatKeahlian`.
-- Array methods: `map`, `filter`, `find`; `sort` dilakukan pada salinan `[...daftarProyek]`.
-- Tiga kasus galat (E.4) dicatat sebabnya di lembar E.5.
+Bagian yang dibantu AI:
+- Memahami konsep dan penggunaan JavaScript ES6+.
+- Membantu mengecek struktur dan sintaks kode JavaScript.
+- Membantu menjelaskan penggunaan map, filter, find, dan spread operator.
+- Membantu mengecek kesalahan pada kode dan memberikan arahan saat debugging.
 
-### Deklarasi AI
-> ISI SENDIRI DENGAN JUJUR. Contoh bentuk:
-- Dibantu AI: GANTI (mis. kerangka awal `app.js`, penjelasan perbedaan `map` vs `filter`).
-- Saya kerjakan sendiri: GANTI (mis. isi data profil dan proyek, menjalankan di Live Server, membaca galat di Console, tangkapan layar, jawaban tiket keluar).
+Bagian yang saya kerjakan sendiri:
+- Menentukan isi dan topik halaman profil.
+- Menulis dan menyesuaikan data profil.
+- Menjalankan kode menggunakan VS Code dan browser.
+- Melakukan pengujian melalui Console.
+- Mengambil bukti screenshot pengujian.
+- Mengisi Worksheet P8 dan melakukan pengecekan hasil.
+- Mengelola commit dan push pekerjaan ke GitHub.
+
+AI digunakan sebagai alat bantu pembelajaran dan pengecekan,
+sedangkan keputusan akhir, pengujian, dan hasil pekerjaan saya lakukan sendiri.
