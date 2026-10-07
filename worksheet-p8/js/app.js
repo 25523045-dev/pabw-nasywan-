@@ -73,6 +73,7 @@ console.table(urutRating);
 console.log(daftarFilm[0].judul); // tetap "Inception"
 
 // ---------- LEMBAR E: tiga kasus sulit ----------
+
 // 1) undefined karena label salah tulis
 console.log(profil.namaa); // sengaja salah -> undefined. Catat di E.5, lalu benahi.
 
