@@ -1,0 +1,58 @@
+/* =========================================================
+   RESPONSIF P6 — MOBILE-FIRST
+   Dimuat paling akhir, setelah layout.css dan komponen.css,
+   supaya aturan di sini menang bila bobotnya sama.
+   Pemilih P5 dipakai apa adanya: .isi (area isi) dan .galeri (kartu).
+   ========================================================= */
+
+/* ---------- dasar: layar sempit, berlaku di semua lebar ---------- */
+.isi {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+.galeri {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+/* Navigasi: deretan mendatar di layar sempit supaya tidak memakan tinggi halaman */
+.navbar {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* Perbaikan dari P5: grid-area bernama tanpa grid-template-areas membuat
+   kolom implisit, sehingga sidebar dan konten tetap bersanding di 360 px.
+   Dikembalikan ke penempatan otomatis (urutan HTML: sidebar, lalu konten). */
+.sisi,
+.utama {
+  grid-area: auto;
+}
+
+/* Perbaikan dari P5: checkbox tema yang disembunyikan (position: absolute)
+   keluar dari layar dan memunculkan gulir mendatar 16 px. Ditambatkan
+   ke kepala halaman supaya tetap di dalam lebar viewport. */
+.kepala__isi {
+  position: relative;
+}
+
+.pengalih-tema {
+  inset: 0 auto auto 0;
+}
+
+/* ---------- tablet: galeri dua kolom ---------- */
+@media (min-width: 48rem) {
+  .galeri { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .petunjuk-gulir { display: none; }
+}
+
+/* ---------- desktop: sidebar bersanding dengan konten ---------- */
+@media (min-width: 60rem) {
+  .isi    { grid-template-columns: 16rem minmax(0, 1fr); }
+  .galeri { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .navbar { flex-direction: column; }
+}

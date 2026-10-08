@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Film Favorit Saya</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="komponen.css">
+  <link rel="stylesheet" href="tema.css">
+  <link rel="stylesheet" href="responsif.css">
+</head>
+
+<body>
+  <div class="page">
+    <header class="kepala">
+      <div class="kepala__isi">
+        <div>
+          <h1>Film Favorit Saya</h1>
+          <p>Daftar film favorit saya beserta tahun, genre, dan rating.</p>
+        </div>
+
+        <label for="tema" class="tombol-tema">Tema gelap</label>
+        <input type="checkbox" id="tema" class="pengalih-tema">
+      </div>
+    </header>
+
+    <div class="isi">
+      <aside class="sisi">
+        <nav class="navbar" aria-label="Navigasi utama">
+          <a href="#daftar-film">Daftar Film</a>
+          <a href="#tambah-film">Tambah Film</a>
+          <a href="#tentang-saya">Tentang Saya</a>
+        </nav>
+      </aside>
+
+      <main class="utama">
+        <section id="daftar-film" class="kartu sorotan">
+          <div class="kartu__isi">
+            <h2>Daftar Film</h2>
+
+            <figure>
+              <img src="film-favorit.jpg" alt="Ilustrasi koleksi film favorit" width="800" height="450" loading="lazy">
+              <figcaption>Ilustrasi koleksi film favorit saya.</figcaption>
+            </figure>
+
+            <div id="filter" role="group" aria-label="Saring film berdasarkan genre">
+              <button type="button" data-kategori="semua" class="aktif">Semua</button>
+              <button type="button" data-kategori="Fiksi Ilmiah">Fiksi Ilmiah</button>
+              <button type="button" data-kategori="Aksi">Aksi</button>
+              <!-- tombol ini sengaja belum punya film: dipakai untuk menguji keadaan kosong -->
+              <button type="button" data-kategori="Drama">Drama</button>
+            </div>
+
+            <p class="petunjuk-gulir">Geser tabel ke samping untuk melihat semua kolom &rarr;</p>
+            <div class="tabel-wrap" tabindex="0" role="region" aria-label="Tabel daftar film">
+              <table>
+                <caption>Daftar film favorit</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Poster</th>
+                    <th scope="col">Judul Film</th>
+                    <th scope="col">Tahun</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Rating</th>
+                  </tr>
+                </thead>
+                <tbody id="daftar"></tbody>
+              </table>
+            </div>
+            <p id="pesan-kosong" hidden></p>
+          </div>
+        </section>
+
+        <div class="galeri">
+          <section id="tambah-film" class="kartu">
+            <div class="kartu__isi">
+              <h2>Tambah Film</h2>
+
+              <form id="form-film" novalidate>
+                <div class="form-kolom">
+                  <label for="judul">Judul Film</label>
+                  <input type="text" id="judul" name="judul" required aria-describedby="galat-judul">
+                  <p class="pesan-galat" id="galat-judul" aria-live="polite" hidden></p>
+                </div>
+
+                <div class="form-kolom">
+                  <label for="tahun">Tahun</label>
+                  <input type="number" id="tahun" name="tahun" min="1900" max="2100" required aria-describedby="galat-tahun">
+                  <p class="pesan-galat" id="galat-tahun" aria-live="polite" hidden></p>
+                </div>
+
+                <div class="form-kolom">
+                  <label for="genre">Genre (opsional)</label>
+                  <input type="text" id="genre" name="genre">
+                </div>
+
+                <div class="form-kolom">
+                  <label for="rating">Rating</label>
+                  <input type="number" id="rating" name="rating" min="0" max="10" step="0.1" required aria-describedby="galat-rating">
+                  <p class="pesan-galat" id="galat-rating" aria-live="polite" hidden></p>
+                </div>
+
+                <div class="form-kolom">
+                  <label for="poster">Foto Poster (opsional)</label>
+                  <input type="file" id="poster" name="poster" accept="image/*">
+                </div>
+
+                <div class="kartu__kaki">
+                  <button type="submit" id="tombol-kirim">Tambah Film</button>
+                </div>
+                <p id="status-form" role="status"></p>
+              </form>
+            </div>
+          </section>
+
+          <section id="tentang-saya" class="kartu">
+            <div class="kartu__isi">
+              <h2>Tentang Saya</h2>
+              <p>Halaman ini berisi daftar film yang saya sukai.</p>
+            </div>
+          </section>
+
+          <section id="ringkasan" class="kartu">
+            <div class="kartu__isi">
+              <h2>Ringkasan</h2>
+              <p>Jumlah film: <strong id="jumlah-film">-</strong></p>
+              <p>Rata-rata rating: <strong id="rata-rating">-</strong></p>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Film Favorit Saya</p>
+    </footer>
+  </div>
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/dom.js"></script>
+</body>
+</html>
