@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" role="img" aria-labelledby="title">
+  <title id="title">Ilustrasi orisinal The Avengers, bukan poster resmi</title>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#26344d"/><stop offset="1" stop-color="#111827"/></linearGradient>
+    <radialGradient id="flare"><stop stop-color="#f3cb83" stop-opacity=".9"/><stop offset="1" stop-color="#f3cb83" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="200" height="300" fill="url(#sky)"/>
+  <circle cx="99" cy="116" r="72" fill="url(#flare)"/>
+  <path d="M0 177h24v-39h17v55h16v-76h19v66h19v-47h17v57h20v-72h18v60h16v-43h14v162H0Z" fill="#111b2b"/>
+  <path d="m100 44 7 36 34-17-22 29 37 7-37 8 22 29-34-17-7 37-8-37-33 17 22-29-38-8 38-7-22-29 33 17Z" fill="#efc880" opacity=".86"/>
+  <path d="M20 184h160M35 202h130" stroke="#91cbb9" stroke-opacity=".45"/>
+  <text x="13" y="251" fill="#b4dfcf" font-family="system-ui,sans-serif" font-size="7" letter-spacing="1.2">ORIGINAL ART · NOT OFFICIAL</text>
+  <text x="12" y="278" fill="#f6f0e4" font-family="system-ui,sans-serif" font-size="19" font-weight="700" letter-spacing="1.4">THE AVENGERS</text>
+</svg>

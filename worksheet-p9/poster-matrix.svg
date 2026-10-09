@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" role="img" aria-labelledby="title">
+  <title id="title">Ilustrasi orisinal The Matrix, bukan poster resmi</title>
+  <defs>
+    <linearGradient id="code" x2="0" y2="1"><stop stop-color="#132e29"/><stop offset="1" stop-color="#071411"/></linearGradient>
+  </defs>
+  <rect width="200" height="300" fill="url(#code)"/>
+  <g stroke="#69c99a" stroke-opacity=".34" stroke-width="1">
+    <path d="M25 0v195M53 0v166M82 0v190M111 0v155M140 0v187M169 0v164"/>
+  </g>
+  <g fill="#9aebbb" opacity=".72" font-family="monospace" font-size="10">
+    <text x="18" y="35">1 0 1</text><text x="47" y="65">0 1</text><text x="76" y="47">1 1 0</text>
+    <text x="105" y="83">0 1</text><text x="134" y="51">1 0 0</text><text x="162" y="92">1 0</text>
+    <text x="20" y="112">0 1</text><text x="76" y="128">1 0 1</text><text x="133" y="142">0 1</text>
+  </g>
+  <path d="M0 201h200v99H0Z" fill="#08110f" fill-opacity=".88"/>
+  <text x="12" y="243" fill="#8de3ac" font-family="system-ui,sans-serif" font-size="7" letter-spacing="1.2">ORIGINAL ART · NOT OFFICIAL</text>
+  <text x="12" y="280" fill="#e1f3e6" font-family="system-ui,sans-serif" font-size="29" font-weight="700" letter-spacing="5">MATRIX</text>
+</svg>

@@ -1,75 +1,138 @@
-/* ==============================
-   TEMA OTOMATIS DARI SISTEM
-   ============================== */
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #0F172A;
-    --color-fg: #E2E8F0;
-    --color-surface: #1E293B;
-    --color-border: #334155;
-    --color-primary: #7DA9F7;
-    --color-danger: #FF8A8A;
-    --color-focus: #FFC000;
-    --shadow-1: 0 1px 3px rgba(0, 0, 0, .45);
-  }
-}
-
-
-/* ==============================
-   TOMBOL TEMA
-   ============================== */
-
 .pengalih-tema {
   position: absolute;
+  width: 1px;
+  height: 1px;
   opacity: 0;
-  pointer-events: none;
+}
+
+.kontrol-tema {
+  position: relative;
+  flex: 0 0 auto;
 }
 
 .tombol-tema {
-  display: inline-block;
-  padding: var(--space-2) var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 2.65rem;
+  padding: var(--space-2) var(--space-4);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  cursor: pointer;
-
+  border-radius: var(--radius-sm);
   background: var(--color-surface);
   color: var(--color-fg);
-
+  cursor: pointer;
   font-size: var(--text-sm);
-  font-weight: 600;
+  font-weight: 650;
 }
 
+.tombol-tema > span {
+  color: var(--color-accent);
+}
 
-/* ==============================
-   MODE TERANG
-   SAAT CHECKBOX TIDAK DICENTANG
-   ============================== */
+.tombol-tema:hover {
+  border-color: var(--color-primary);
+}
+
+.kontrol-tema:has(#tema:focus-visible) .tombol-tema {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
 
 :root:has(#tema:not(:checked)) {
-  --color-bg: #F8FAFC;
-  --color-fg: #0F172A;
-  --color-surface: #FFFFFF;
-  --color-border: #D1D5DB;
-  --color-primary: #1D3A8C;
-  --color-danger: #B00020;
-  --color-focus: #2563EB;
-  --shadow-1: 0 1px 3px rgba(0, 0, 0, .10);
+  color-scheme: light;
+  --color-bg: #f4f3ed;
+  --color-bg-raised: #ebece5;
+  --color-surface: #fffefa;
+  --color-surface-raised: #f3f4ef;
+  --color-fg: #26312e;
+  --color-muted: #65716b;
+  --color-border: #d8ded8;
+  --color-primary: #386b55;
+  --color-primary-strong: #e5efe9;
+  --color-accent: #a66e2d;
+  --color-danger: #a6403a;
+  --color-focus: #a66e2d;
 }
 
+:root:has(#tema:not(:checked)) .kepala {
+  background:
+    linear-gradient(90deg, rgba(244, 243, 237, .97), rgba(244, 243, 237, .88)),
+    radial-gradient(ellipse at 78% 35%, rgba(166, 110, 45, .13), transparent 34%),
+    radial-gradient(ellipse at 60% 100%, rgba(56, 107, 85, .12), transparent 46%),
+    repeating-linear-gradient(90deg, transparent 0 3.1rem, rgba(38, 49, 46, .025) 3.15rem 3.2rem),
+    var(--color-bg-raised);
+}
 
-/* ==============================
-   MODE GELAP
-   SAAT CHECKBOX DICENTANG
-   ============================== */
+:root:has(#tema:not(:checked)) .sisi {
+  background: rgba(255, 254, 250, .94);
+}
 
-:root:has(#tema:checked) {
-  --color-bg: #0F172A;
-  --color-fg: #E2E8F0;
-  --color-surface: #1E293B;
-  --color-border: #334155;
-  --color-primary: #7DA9F7;
-  --color-danger: #FF8A8A;
-  --color-focus: #FFC000;
-  --shadow-1: 0 1px 3px rgba(0, 0, 0, .45);
+:root:has(#tema:not(:checked)) .navbar a:hover,
+:root:has(#tema:not(:checked)) .navbar a[aria-current="page"] {
+  background: var(--color-primary-strong);
+}
+
+:root:has(#tema:not(:checked)) .sorotan {
+  border-color: rgba(56, 107, 85, .22);
+  background:
+    radial-gradient(ellipse at 96% 6%, rgba(56, 107, 85, .08), transparent 30%),
+    linear-gradient(145deg, #f2f3ec, #ebece5 72%);
+  box-shadow:
+    inset 0 1px 0 rgba(56, 107, 85, .06),
+    0 0 1.5rem rgba(56, 107, 85, .04);
+}
+
+:root:has(#tema:not(:checked)) .daftar-pengantar,
+:root:has(#tema:not(:checked)) .filter-kepala,
+:root:has(#tema:not(:checked)) .ringkasan-list > div {
+  background: var(--color-surface);
+}
+
+:root:has(#tema:not(:checked)) table {
+  background: transparent;
+}
+
+:root:has(#tema:not(:checked)) .tabel-wrap {
+  border-color: rgba(56, 107, 85, .2);
+  background:
+    radial-gradient(ellipse at 12% 0, rgba(56, 107, 85, .05), transparent 38%),
+    linear-gradient(145deg, #fffefa, #f3f4ef 72%);
+  box-shadow:
+    inset 0 1px 0 rgba(56, 107, 85, .04),
+    0 0 1.25rem rgba(56, 107, 85, .025);
+}
+
+:root:has(#tema:not(:checked)) caption {
+  border-color: rgba(56, 107, 85, .16);
+  color: var(--color-fg);
+}
+
+:root:has(#tema:not(:checked)) thead th {
+  background: var(--color-bg-raised);
+  color: var(--color-fg);
+}
+
+:root:has(#tema:not(:checked)) thead tr::after {
+  border-color: var(--color-border);
+  background: var(--color-bg-raised);
+  color: var(--color-primary);
+}
+
+:root:has(#tema:not(:checked)) .tabel-wrap tbody tr > td:nth-child(5) {
+  color: #fffefa;
+}
+
+:root:has(#tema:not(:checked)) #filter button.aktif {
+  background: var(--color-primary-strong);
+  color: var(--color-primary);
+}
+
+:root:has(#tema:not(:checked)) #tombol-kirim {
+  background: var(--color-primary);
+  color: #fffefa;
+}
+
+:root:has(#tema:not(:checked)) #tombol-kirim:hover {
+  background: #2f604a;
+  color: #fffefa;
 }

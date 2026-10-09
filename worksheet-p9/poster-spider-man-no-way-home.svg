@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" role="img" aria-labelledby="title">
+  <title id="title">Ilustrasi orisinal Spider-Man: No Way Home, bukan poster resmi</title>
+  <defs>
+    <linearGradient id="city" x2="0" y2="1"><stop stop-color="#23344d"/><stop offset=".65" stop-color="#753f49"/><stop offset="1" stop-color="#171c2a"/></linearGradient>
+  </defs>
+  <rect width="200" height="300" fill="url(#city)"/>
+  <circle cx="100" cy="104" r="50" fill="#e1a77e" opacity=".16"/>
+  <path d="M0 166h20v-38h17v52h15v-70h20v80h18v-47h18v54h18v-73h20v58h17v-38h19v156H0Z" fill="#172638"/>
+  <g fill="none" stroke="#e6c3b5" stroke-opacity=".55">
+    <path d="M0 40 100 153 200 40M0 82l100 71L200 82M0 124l100 29 100-29M45 0l55 153L155 0M15 0l85 153L185 0"/>
+  </g>
+  <path d="M100 154v47" stroke="#f2d3b5" stroke-width="2"/>
+  <text x="12" y="245" fill="#e7c6b6" font-family="system-ui,sans-serif" font-size="6.5" letter-spacing=".7">ORIGINAL ART · NOT OFFICIAL</text>
+  <text x="12" y="269" fill="#f5eee8" font-family="system-ui,sans-serif" font-size="14" font-weight="700" letter-spacing="1">SPIDER-MAN</text>
+  <text x="12" y="287" fill="#e7b9a6" font-family="system-ui,sans-serif" font-size="11" letter-spacing="1.2">NO WAY HOME</text>
+</svg>

@@ -49,6 +49,13 @@ export const daftarFilm = [
   { judul: "Inception", tahun: 2010, genre: "Fiksi Ilmiah", rating: 9, poster: "poster-inception.jpg" },
   { judul: "Interstellar", tahun: 2014, genre: "Fiksi Ilmiah", rating: 9.5, poster: "poster-interstellar.jpg" },
   { judul: "The Dark Knight", tahun: 2008, genre: "Aksi", rating: 9, poster: "poster-dark-knight.jpg" },
+  { judul: "Avatar", tahun: 2009, genre: "Fiksi Ilmiah", rating: 7.8, poster: "poster-avatar.svg" },
+  { judul: "The Avengers", tahun: 2012, genre: "Aksi", rating: 8.1, poster: "poster-avengers.svg" },
+  { judul: "Gladiator", tahun: 2000, genre: "Drama", rating: 8.5, poster: "poster-gladiator.svg" },
+  { judul: "The Lord of the Rings: The Fellowship of the Ring", tahun: 2001, genre: "Fantasi", rating: 8.8, poster: "poster-lotr.svg" },
+  { judul: "The Matrix", tahun: 1999, genre: "Fiksi Ilmiah", rating: 8.7, poster: "poster-matrix.svg" },
+  { judul: "Spider-Man: No Way Home", tahun: 2021, genre: "Aksi", rating: 8.2, poster: "poster-spider-man-no-way-home.svg" },
+  { judul: "Parasite", tahun: 2019, genre: "Drama", rating: 8.5, poster: "poster-parasite.svg" },
 ];
 
 console.table(profil.keahlian);

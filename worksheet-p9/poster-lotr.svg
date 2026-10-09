@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" role="img" aria-labelledby="title">
+  <title id="title">Ilustrasi orisinal The Lord of the Rings: The Fellowship of the Ring, bukan poster resmi</title>
+  <defs>
+    <linearGradient id="dusk" x2="0" y2="1"><stop stop-color="#233d4b"/><stop offset="1" stop-color="#111e24"/></linearGradient>
+  </defs>
+  <rect width="200" height="300" fill="url(#dusk)"/>
+  <circle cx="151" cy="61" r="24" fill="#e9d6a0" opacity=".8"/>
+  <path d="m0 175 35-51 20 25 38-78 37 74 24-35 46 66v71H0Z" fill="#29484a"/>
+  <path d="m0 196 43-42 28 23 35-57 30 50 26-23 38 43v61H0Z" fill="#182f35"/>
+  <path d="M85 178h30v58H85zM78 168h44l-22-27z" fill="#d7c48e" opacity=".8"/>
+  <path d="M100 26v13m-7-7h14M35 76v9m-5-5h10" stroke="#c4ddb6" stroke-width="1.5" opacity=".7"/>
+  <text x="12" y="252" fill="#c4ddb6" font-family="system-ui,sans-serif" font-size="6.5" letter-spacing=".8">ORIGINAL ART · NOT OFFICIAL</text>
+  <text x="12" y="271" fill="#f1ead4" font-family="system-ui,sans-serif" font-size="12" font-weight="700" letter-spacing=".6">THE LORD OF THE RINGS</text>
+  <text x="12" y="287" fill="#d6c99f" font-family="system-ui,sans-serif" font-size="8" letter-spacing=".8">THE FELLOWSHIP OF THE RING</text>
+</svg>

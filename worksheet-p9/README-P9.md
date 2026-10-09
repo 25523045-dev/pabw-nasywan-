@@ -2,8 +2,19 @@
 
 Pengembangan Aplikasi Berbasis Web (SIF302) · Pertemuan 9 · NIM 25523045
 
-Halaman "Film Favorit Saya" dari P8. Tabel film kini dibentuk dari data (`daftarFilm` di `js/app.js`),
+Halaman "Film Favorit Saya" dari P8. Galeri film dibentuk dari data (`daftarFilm` di `js/app.js`),
 dilengkapi filter genre dengan satu pendengar di induk, dan form Tambah Film dengan validasi per kolom.
+Data awal berisi tiga film P8 dan tujuh film tambahan. Tiga film P8 memakai poster lokal proyek;
+tujuh film tambahan memakai ilustrasi SVG orisinal yang dibuat untuk galeri dan bukan poster resmi.
+
+## Menambahkan poster untuk film awal
+
+Ilustrasi SVG tambahan bukan materi promosi atau poster resmi. Untuk menggantinya, letakkan aset yang
+benar dan boleh digunakan di folder `worksheet-p9`, lalu isi properti `poster` pada entri film terkait
+di `js/app.js` dengan nama file yang benar-benar tersedia. Biarkan nilainya kosong sampai aset siap;
+renderer akan menampilkan "Tanpa foto" dan galeri tetap berfungsi. Jangan mengisi path perkiraan atau
+memakai poster milik film lain. Input poster pada formulir hanya berlaku untuk film yang ditambahkan lewat
+formulir, bukan untuk mengubah poster entri awal.
 
 ## Cara menjalankan
 
@@ -43,7 +54,7 @@ Di VS Code boleh memakai ekstensi Live Server.
 - Pendengar dipasang sekali, di luar `render`: filter di `#filter`, tombol Hapus di `#daftar`,
   `input` di form. Tombol dicari dengan `event.target.closest(...)`.
 - `daftarFilm` disalin ke `film` (`map` + spread) supaya data asli tidak berubah saat menambah atau menghapus.
-- Tombol "Drama" sengaja belum punya film, untuk memperlihatkan pesan keadaan kosong.
+- Filter genre menampilkan film yang sesuai; genre tanpa film menampilkan pesan keadaan kosong.
 - Validasi berjalan setelah tombol Tambah Film ditekan pertama kali. Sesudah itu pesan galat diperbarui
   setiap kali mengetik, dan tombol menunggu (`disabled`) sampai semua kolom layak.
   Form diberi `novalidate` supaya pesan dari JavaScript yang tampil, bukan gelembung bawaan peramban.

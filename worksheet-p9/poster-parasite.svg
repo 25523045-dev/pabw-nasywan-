@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" role="img" aria-labelledby="title">
+  <title id="title">Ilustrasi orisinal Parasite, bukan poster resmi</title>
+  <defs>
+    <linearGradient id="house" x2="0" y2="1"><stop stop-color="#40544d"/><stop offset=".52" stop-color="#c4b48d"/><stop offset="1" stop-color="#282b2b"/></linearGradient>
+  </defs>
+  <rect width="200" height="300" fill="url(#house)"/>
+  <path d="M0 32h200v105H0Z" fill="#d6d0b5" opacity=".22"/>
+  <path d="M23 152h154v82H23z" fill="#263b36"/>
+  <path d="m15 153 85-58 85 58Z" fill="#354c43"/>
+  <path d="M41 171h46v37H41zM108 169h49v65h-49z" fill="#d3c99f" opacity=".8"/>
+  <path d="M0 235h200v65H0Z" fill="#1a2424"/>
+  <path d="M0 251h200M0 269h200M0 287h200" stroke="#879082" stroke-opacity=".35"/>
+  <path d="M23 235v65m25-65v65m25-65v65m25-65v65m25-65v65m25-65v65m25-65v65" stroke="#879082" stroke-opacity=".26"/>
+  <text x="13" y="45" fill="#e6dfc8" font-family="system-ui,sans-serif" font-size="7" letter-spacing="1.2">ORIGINAL ART · NOT OFFICIAL</text>
+  <text x="12" y="220" fill="#f0ead6" font-family="system-ui,sans-serif" font-size="27" font-weight="700" letter-spacing="4">PARASITE</text>
+</svg>

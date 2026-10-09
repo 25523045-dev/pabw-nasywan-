@@ -1,58 +1,156 @@
-/* =========================================================
-   RESPONSIF P6 — MOBILE-FIRST
-   Dimuat paling akhir, setelah layout.css dan komponen.css,
-   supaya aturan di sini menang bila bobotnya sama.
-   Pemilih P5 dipakai apa adanya: .isi (area isi) dan .galeri (kartu).
-   ========================================================= */
+@media (max-width: 68rem) {
+  .navbar {
+    flex-wrap: wrap;
+  }
 
-/* ---------- dasar: layar sempit, berlaku di semua lebar ---------- */
-.isi {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: var(--space-4);
+  .daftar-pengantar {
+    grid-template-columns: minmax(0, 1fr) minmax(15rem, 1fr);
+  }
 }
 
-.galeri {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: var(--space-4);
+@media (max-width: 44rem) {
+  .kepala {
+    min-height: 10rem;
+  }
+
+  .kepala__isi {
+    align-items: flex-start;
+  }
+
+  .kepala__montase {
+    right: var(--space-4);
+    bottom: var(--space-2);
+    height: 4rem;
+    gap: var(--space-1);
+    opacity: .32;
+  }
+
+  .kepala__montase img {
+    width: 2rem;
+    height: 3.1rem;
+  }
+
+  .kepala__montase img:nth-child(2) {
+    height: 2.6rem;
+  }
+
+  .kepala__isi > div:first-child {
+    max-width: 82%;
+  }
+
+  .daftar-pengantar {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-4);
+  }
+
+  .daftar-pengantar figure {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .daftar-pengantar figure img {
+    max-width: 100%;
+    max-height: none;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .galeri {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #tambah-film {
+    grid-column: auto;
+  }
+
 }
 
-/* Navigasi: deretan mendatar di layar sempit supaya tidak memakan tinggi halaman */
-.navbar {
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: var(--space-2);
+@media (max-width: 34rem) {
+  body {
+    padding: var(--space-3);
+  }
+
+  .kepala {
+    padding: var(--space-4);
+  }
+
+  .kepala__isi {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .navbar a {
+    justify-content: center;
+    gap: var(--space-1);
+    min-height: 2.75rem;
+    padding: var(--space-2) .25rem;
+    font-size: .72rem;
+  }
+
+  .daftar-pengantar {
+    padding: var(--space-3);
+  }
+
+  .filter-kepala {
+    padding: var(--space-3);
+  }
+
+  table {
+    font-size: .72rem;
+  }
+
+  table {
+    min-width: 0;
+  }
+
+  form {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
-/* Perbaikan dari P5: grid-area bernama tanpa grid-template-areas membuat
-   kolom implisit, sehingga sidebar dan konten tetap bersanding di 360 px.
-   Dikembalikan ke penempatan otomatis (urutan HTML: sidebar, lalu konten). */
-.sisi,
-.utama {
-  grid-area: auto;
+@media (max-width: 68rem) {
+  .tabel-wrap tbody {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-3);
+  }
 }
 
-/* Perbaikan dari P5: checkbox tema yang disembunyikan (position: absolute)
-   keluar dari layar dan memunculkan gulir mendatar 16 px. Ditambatkan
-   ke kepala halaman supaya tetap di dalam lebar viewport. */
-.kepala__isi {
-  position: relative;
+@media (max-width: 44rem) {
+  .tabel-wrap tbody {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
+    padding: var(--space-3);
+  }
+
+  .tabel-wrap tbody tr {
+    gap: var(--space-2);
+    padding: var(--space-2);
+  }
+
+  .tabel-wrap tbody tr > td:nth-child(5) {
+    top: calc(var(--space-2) + var(--space-1));
+  }
 }
 
-.pengalih-tema {
-  inset: 0 auto auto 0;
+@media (max-width: 22rem) {
+  .tabel-wrap tbody {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
-/* ---------- tablet: galeri dua kolom ---------- */
-@media (min-width: 48rem) {
-  .galeri { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .petunjuk-gulir { display: none; }
-}
-
-/* ---------- desktop: sidebar bersanding dengan konten ---------- */
-@media (min-width: 60rem) {
-  .isi    { grid-template-columns: 16rem minmax(0, 1fr); }
-  .galeri { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .navbar { flex-direction: column; }
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
 }
