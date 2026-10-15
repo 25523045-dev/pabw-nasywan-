@@ -1,0 +1,156 @@
+@media (max-width: 68rem) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .daftar-pengantar {
+    grid-template-columns: minmax(0, 1fr) minmax(15rem, 1fr);
+  }
+}
+
+@media (max-width: 44rem) {
+  .kepala {
+    min-height: 10rem;
+  }
+
+  .kepala__isi {
+    align-items: flex-start;
+  }
+
+  .kepala__montase {
+    right: var(--space-4);
+    bottom: var(--space-2);
+    height: 4rem;
+    gap: var(--space-1);
+    opacity: .32;
+  }
+
+  .kepala__montase img {
+    width: 2rem;
+    height: 3.1rem;
+  }
+
+  .kepala__montase img:nth-child(2) {
+    height: 2.6rem;
+  }
+
+  .kepala__isi > div:first-child {
+    max-width: 82%;
+  }
+
+  .daftar-pengantar {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-4);
+  }
+
+  .daftar-pengantar figure {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .daftar-pengantar figure img {
+    max-width: 100%;
+    max-height: none;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .galeri {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #tambah-film {
+    grid-column: auto;
+  }
+
+}
+
+@media (max-width: 34rem) {
+  body {
+    padding: var(--space-3);
+  }
+
+  .kepala {
+    padding: var(--space-4);
+  }
+
+  .kepala__isi {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .navbar a {
+    justify-content: center;
+    gap: var(--space-1);
+    min-height: 2.75rem;
+    padding: var(--space-2) .25rem;
+    font-size: .72rem;
+  }
+
+  .daftar-pengantar {
+    padding: var(--space-3);
+  }
+
+  .filter-kepala {
+    padding: var(--space-3);
+  }
+
+  table {
+    font-size: .72rem;
+  }
+
+  table {
+    min-width: 0;
+  }
+
+  form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 54rem) {
+  .tabel-wrap tbody {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-3);
+  }
+}
+
+@media (max-width: 38rem) {
+  .tabel-wrap tbody {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
+    padding: var(--space-3);
+  }
+
+  .tabel-wrap tbody tr {
+    gap: var(--space-2);
+    padding: var(--space-2);
+  }
+
+  .tabel-wrap tbody tr > td:nth-child(5) {
+    top: calc(var(--space-2) + var(--space-1));
+  }
+}
+
+@media (max-width: 24rem) {
+  .tabel-wrap tbody {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

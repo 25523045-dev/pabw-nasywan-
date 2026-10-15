@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" role="img" aria-labelledby="title">
+  <title id="title">Ilustrasi orisinal Avatar, bukan poster resmi</title>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#142f55"/><stop offset="1" stop-color="#071522"/></linearGradient>
+    <radialGradient id="moon"><stop stop-color="#b8f2d8"/><stop offset="1" stop-color="#5aa8a1"/></radialGradient>
+  </defs>
+  <rect width="200" height="300" fill="url(#sky)"/>
+  <circle cx="143" cy="73" r="28" fill="url(#moon)" opacity=".9"/>
+  <path d="M0 160 38 123l22 27 34-55 37 54 19-23 50 44v68H0Z" fill="#173b47"/>
+  <path d="m14 198 44-49 17 22 39-57 40 61 18-20 28 30v48H14Z" fill="#245e5a"/>
+  <path d="M0 233q39-22 79 0t78 0q21-11 43-4v71H0Z" fill="#102b36"/>
+  <g fill="#9ee8c6" opacity=".85"><circle cx="35" cy="83" r="2"/><circle cx="68" cy="57" r="2"/><circle cx="104" cy="92" r="1.7"/><circle cx="40" cy="190" r="2"/><circle cx="151" cy="185" r="2"/></g>
+  <text x="14" y="258" fill="#a8e8cd" font-family="system-ui,sans-serif" font-size="7" letter-spacing="1.5">ORIGINAL ART · NOT OFFICIAL</text>
+  <text x="12" y="281" fill="#f0f4ec" font-family="system-ui,sans-serif" font-size="20" font-weight="700" letter-spacing="2">AVATAR</text>
+</svg>
