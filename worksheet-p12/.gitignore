@@ -1,0 +1,9 @@
+# worksheet-p12/.gitignore
+node_modules/
+dist/
+.env
+.DS_Store
+
+# JANGAN diabaikan:
+# package.json
+# package-lock.json

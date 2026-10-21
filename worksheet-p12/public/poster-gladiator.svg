@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" role="img" aria-labelledby="title">
+  <title id="title">Ilustrasi orisinal Gladiator, bukan poster resmi</title>
+  <defs>
+    <linearGradient id="sand" x2="0" y2="1"><stop stop-color="#593f37"/><stop offset=".56" stop-color="#a36d4c"/><stop offset="1" stop-color="#211d24"/></linearGradient>
+  </defs>
+  <rect width="200" height="300" fill="url(#sand)"/>
+  <circle cx="146" cy="69" r="25" fill="#edc78e" opacity=".82"/>
+  <path d="M23 179V96a77 77 0 0 1 154 0v83h-17V97a60 60 0 0 0-120 0v82Z" fill="#332a2b" stroke="#d0a575" stroke-width="4"/>
+  <path d="M43 178v-75a57 57 0 0 1 114 0v75" fill="none" stroke="#d0a575" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M0 182q50-16 100 0t100 0v118H0Z" fill="#30242a"/>
+  <path d="M0 201q50-18 100 0t100 0M0 219q50-18 100 0t100 0" fill="none" stroke="#c28a61" stroke-opacity=".45"/>
+  <text x="13" y="251" fill="#e5bd91" font-family="system-ui,sans-serif" font-size="7" letter-spacing="1.2">ORIGINAL ART · NOT OFFICIAL</text>
+  <text x="12" y="279" fill="#f5eadb" font-family="system-ui,sans-serif" font-size="24" font-weight="700" letter-spacing="2">GLADIATOR</text>
+</svg>
