@@ -1,47 +1,48 @@
-# Worksheet P6 - Responsive Web Design
+# Worksheet P12 — Build Produksi dengan Vite
 
 ## Deskripsi
 
-Worksheet P6 merupakan pengembangan dari halaman profil pada pertemuan sebelumnya dengan menerapkan konsep **Responsive Web Design** menggunakan pendekatan **Mobile-First**.
-
-Halaman dibuat agar dapat menyesuaikan tampilan pada berbagai ukuran layar, mulai dari perangkat mobile, tablet, hingga desktop.
+Worksheet P12 merupakan pengembangan aplikasi web menggunakan Vue dan Vite. Pada worksheet ini dilakukan proses build untuk menghasilkan aset produksi yang lebih ringkas dan pengujian aplikasi melalui development server serta production preview.
 
 ## Implementasi
 
 Pada worksheet ini diterapkan:
 
-- Responsive Web Design
-- Pendekatan Mobile-First
-- CSS Grid
-- Media Query
-- Responsive Image
-- Horizontal scrolling pada tabel
-- Breakpoint untuk tablet dan desktop
+- Pengembangan aplikasi menggunakan Vue dan Vite.
+- Pengelolaan aset CSS, JavaScript, dan gambar.
+- Build produksi menggunakan `npm run build`.
+- Pengujian hasil build menggunakan `npm run preview`.
+- Pemeriksaan jumlah request dan ukuran transfer melalui tab Network.
+- Pemeriksaan Console pada browser.
+- Penggunaan Git untuk menyimpan riwayat perubahan.
 
-## Breakpoint
+## Perintah Pengujian
 
-Responsive layout menggunakan breakpoint:
+```bash
+npm run dev
+npm run build
+npm run preview
+```
 
-- **Mobile:** di bawah `48rem`
-- **Tablet:** mulai `48rem`
-- **Desktop:** mulai `60rem`
+Development server menggunakan port `5173`, sedangkan preview produksi menggunakan port `4173` secara default.
 
-## Struktur File
+## Hasil Build
 
-```text
-worksheet-p6/
-├── bukti/
-│   ├── layar-360px.png
-│   ├── layar-768px.png
-│   └── layar-1280px.png
-├── profil.html
-├── tokens.css
-├── base.css
-├── layout.css
-├── komponen.css
-├── tema.css
-├── responsif.css
-├── film-favorit.jpg
-├── poster-inception.jpg
-├── poster-interstellar.jpg
-└── poster-dark-knight.jpg
+Build berhasil dijalankan menggunakan Vite.
+
+- `dist/index.html`: 0,54 kB.
+- `dist/assets/index-C8Hnbxx7.css`: 21,46 kB.
+- `dist/assets/index-BsR0jJAE.js`: 80,64 kB.
+
+## Hasil Pengujian Network
+
+- Development: 38 requests, 3,7 MB transferred.
+- Production preview: 16 requests. Total transferred perlu dilengkapi berdasarkan hasil pengukuran di browser.
+
+## Bukti Pengujian
+
+Lampirkan screenshot aplikasi pada production preview, hasil pemeriksaan Network, dan Console browser sesuai ketentuan worksheet.
+
+## Deklarasi Penggunaan AI
+
+Lengkapi bagian ini berdasarkan penggunaan AI yang benar-benar dilakukan selama pengerjaan worksheet.
